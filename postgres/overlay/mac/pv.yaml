@@ -1,0 +1,10 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: postgres-pv-volume
+  labels:
+    type: local
+    app: postgres
+spec:
+  hostPath:
+    path: "/Users/sudranga1/k8sdata/postgres-data/"

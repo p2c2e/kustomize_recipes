@@ -1,0 +1,10 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: redis-pv-volume
+  labels:
+    type: local
+    app: redis
+spec:
+  hostPath:
+    path: "/Users/sudranga1/k8sdata/redis-data/"
