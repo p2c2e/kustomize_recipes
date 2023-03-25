@@ -2,5 +2,5 @@ resources:
   - config.yaml
   - pv.yaml
   - pvc.yaml
-  - deploy.yaml
+  - deployment.yaml
   - svc.yaml

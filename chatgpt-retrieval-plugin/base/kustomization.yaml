@@ -1,5 +1,11 @@
 resources:
-  - config.yaml
-  - deploy.yaml
+  - deployment.yaml
   - svc.yaml
   - ing.yaml
+configMapGenerator:
+  - name: chatgpt-retrieval-config
+    literals:
+      - DATASTORE=redis
+      - REDIS_HOST=redis-clusterip-svc
+      - BEARER_TOKEN=<BEARER TOKEN HERE>
+      - OPENAI_API_KEY=<API KEY HERE>
