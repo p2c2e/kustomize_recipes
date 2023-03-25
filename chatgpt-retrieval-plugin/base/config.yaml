@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: chatgpt-retrieval-config
+  labels:
+    app: chatgpt-retrieval
+data:
+  DATASTORE: redis
+  REDIS_HOST: redis-clusterip-svc
+  BEARER_TOKEN: <BEARER TOKEN HERE>
+  OPENAI_API_KEY: <API KEY HERE>
