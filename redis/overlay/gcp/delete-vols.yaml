@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+spec:
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+        - name: redis
+          volumeMounts:
+            - $patch: delete
+              name: redisdb
+      volumes:
+        - $patch: delete
+          name: redisdb

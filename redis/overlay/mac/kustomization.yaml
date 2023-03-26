@@ -1,4 +1,6 @@
+namespace: db
 resources:
   - ../../base/
+  - ns.yaml
 patchesStrategicMerge:
   - pv.yaml

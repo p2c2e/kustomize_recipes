@@ -1,0 +1,8 @@
+namespace: gcp-redis
+resources:
+  - ../../base/
+  - ns.yaml
+patchesStrategicMerge:
+  - delete-pv.yaml
+  - delete-pvc.yaml
+  - delete-vols.yaml
